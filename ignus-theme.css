@@ -1,0 +1,658 @@
+:root {
+    --success-hue: 144;
+    --success-lightness: 40%;
+    --danger-hue: 0;
+    --danger-lightness: 50%;
+    --warning-hue: 40;
+    --warning-lightness: 50%;
+    --info-hue: 270;
+    --info-lightness: 50%;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+body::-webkit-scrollbar {
+    width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0px 10px hsla(198, 0%, 90%, 1);
+	box-shadow: inset 0 0 0px 10px hsla(198, 0%, 90%, 1);
+    background-color: hsla(198, 100%, 50%, 0);
+    border-radius: 30px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: hsla(198, 100%, 4%, 1);
+    border-radius: 50px;
+}
+
+/* Buttons */
+
+.btn-ignus {
+    display: inline-block;
+    font-weight: normal;
+    font-family: Nunito;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 0px solid transparent;
+    padding: 7px 18px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 0px solid transparent;
+    outline: none;
+    font-weight: bold;
+}
+
+
+.btn-white-ignus {
+    color: black;
+    box-shadow: var(--small-shadows);
+    background: white;
+}
+
+.btn-white-ignus:hover {
+    color: #fff;
+    background-color: hsla(0, 100%, 0%, 1);
+    outline: none;
+}
+
+.btn-primary-ignus {
+    color: var(--textcolor-for-colored-background);
+    background-color: hsla(var(--base-hue), 100%, var(--base-lightness), 1);
+}
+
+.btn-primary-ignus:hover {
+    color: var(--textcolor-for-colored-background-on-hover);
+    background-color: hsla(0, 100%, 0%, 1);
+    outline: none;
+}
+
+
+.btn-success-ignus {
+    color: white;
+    background-color: hsla(var(--success-hue), 100%, var(--success-lightness), 1);
+}
+
+.btn-success-ignus:hover {
+    color: #fff;
+    background-color: hsla(0, 100%, 0%, 1);
+    outline: none;
+}
+
+.btn-danger-ignus {
+    color: white;
+    background-color: hsla(var(--danger-hue), 100%, var(--danger-lightness), 1);
+}
+
+.btn-danger-ignus:hover {
+    color: #fff;
+    background-color: hsla(0, 100%, 0%, 1);
+    outline: none;
+}
+
+
+.btn-warning-ignus {
+    color: black;
+    background-color: hsla(var(--warning-hue), 100%, var(--warning-lightness), 1);
+}
+
+.btn-warning-ignus:hover {
+    color: #fff;
+    background-color: hsla(0, 100%, 0%, 1);
+    outline: none;
+}
+
+
+.btn-info-ignus {
+    color: white;
+    background-color: hsla(var(--info-hue), 100%, var(--info-lightness), 1);
+}
+
+.btn-info-ignus:hover {
+    color: #fff;
+    background-color: hsla(0, 100%, 0%, 1);
+    outline: none;
+}
+
+.btn-dark-ignus {
+    color: white;
+    background-color: hsla(0, 0%, 2%, 1);
+}
+
+.btn-dark-ignus:hover {
+    color: #fff;
+    background-color: hsla(0, 0%, 20%, 1);
+    outline: none;
+}
+
+
+
+/* Lighter Buttons */
+
+.btn-light-primary-ignus {
+    color: hsla(var(--base-hue), 100%, 50%, 1);
+    background-color: hsla(var(--base-hue), 100%, 97%, 1);
+}
+
+.btn-light-primary-ignus:hover {
+    color: var(--textcolor-for-colored-background);
+    background-color: hsla(var(--base-hue), 100%, var(--base-lightness), 1);
+    outline: none;
+}
+
+
+.btn-light-success-ignus {
+    color: hsla(var(--success-hue), 100%, 40%, 1);
+    background-color: hsla(var(--success-hue), 100%, 97%, 1);
+}
+
+.btn-light-success-ignus:hover {
+    color: #fff;
+    background-color: hsla(var(--success-hue), 100%, var(--success-lightness), 1);
+    outline: none;
+}
+
+.btn-light-danger-ignus {
+    color: hsla(var(--danger-hue), 100%, 40%, 1);;
+    background-color: hsla(var(--danger-hue), 100%, 97%, 1);
+}
+
+.btn-light-danger-ignus:hover {
+    color: #fff;
+    background-color: hsla(var(--danger-hue), 100%, var(--danger-lightness), 1);
+    outline: none;
+}
+
+
+.btn-light-warning-ignus {
+    color: hsla(var(--warning-hue), 100%, 46%, 1);
+    background-color: hsla(var(--warning-hue), 100%, 97%, 1);
+}
+
+.btn-light-warning-ignus:hover {
+    color: black;
+    background-color: hsla(var(--warning-hue), 100%, var(--warning-lightness), 1);
+    outline: none;
+}
+
+
+.btn-light-info-ignus {
+    color: hsla(var(--info-hue), 100%, var(--info-lightness), 1);
+    background-color: hsla(var(--info-hue), 100%, 97%, 1);
+}
+
+.btn-light-info-ignus:hover {
+    color: white;
+    background-color: hsla(var(--info-hue), 100%, var(--info-lightness), 1);
+    outline: none;
+}
+
+.btn-light-dark-ignus {
+    color: black;
+    background-color: hsla(0, 0%, 90%, 1);
+}
+
+.btn-light-dark-ignus:hover {
+    color: #fff;
+    background-color: hsla(0, 0%, 20%, 1);
+    outline: none;
+}
+
+
+
+/* Hover Buttons */
+
+.btn-hover-primary-ignus {
+    color: hsla(var(--base-hue), 100%, 50%, 1);
+    background-color: hsla(0, 100%, 100%, 1);
+}
+
+.btn-hover-primary-ignus:hover {
+    background-color: hsla(var(--base-hue), 100%, 94%, 1);
+    outline: none;
+}
+
+
+.btn-hover-success-ignus {
+    color: hsla(var(--success-hue), 100%, 40%, 1);
+    background-color: hsla(var(--success-hue), 100%, 100%, 1);
+}
+
+.btn-hover-success-ignus:hover {
+    background-color: hsla(var(--success-hue), 100%, 94%, 1);
+    outline: none;
+}
+
+.btn-hover-danger-ignus {
+    color: hsla(var(--danger-hue), 100%, 40%, 1);
+    background-color: hsla(var(--danger-hue), 100%, 100%, 1);
+}
+
+.btn-hover-danger-ignus:hover {
+    background-color: hsla(var(--danger-hue), 100%, 94%, 1);
+    outline: none;
+}
+
+
+.btn-hover-warning-ignus {
+    color: hsla(var(--warning-hue), 100%, 46%, 1);
+    background-color: hsla(var(--warning-hue), 100%, 100%, 1);
+}
+
+.btn-hover-warning-ignus:hover {
+    background-color: hsla(var(--warning-hue), 100%, 97%, 1);
+    outline: none;
+}
+
+
+.btn-hover-info-ignus {
+    color: hsla(var(--info-hue), 100%, var(--info-lightness), 1);
+    background-color: hsla(var(--info-hue), 100%, 100%, 1);
+}
+
+.btn-hover-info-ignus:hover {
+    background-color: hsla(var(--info-hue), 100%, 97%, 1);
+    outline: none;
+}
+
+.btn-hover-dark-ignus {
+    color: black;
+    background-color: hsla(0, 0%, 100%, 1);
+}
+
+.btn-hover-dark-ignus:hover {
+    background-color: hsla(0, 0%, 90%, 1);
+    outline: none;
+}
+
+/* Outline Buttons */
+
+.btn-outline-primary-ignus {
+    border: 1px solid hsla(var(--base-hue), 100%, 50%, 1);
+    color: hsla(var(--base-hue), 100%, 50%, 1);
+    background-color: hsla(var(--base-hue), 100%, 100%, 1);
+}
+
+.btn-outline-primary-ignus:hover {
+    color: var(--textcolor-for-colored-background);
+    background-color: hsla(var(--base-hue), 100%, var(--base-lightness), 1);
+    outline: none;
+}
+
+
+.btn-outline-success-ignus {
+    color: hsla(var(--success-hue), 100%, 40%, 1);
+    border: 1px solid hsla(var(--success-hue), 100%, 40%, 1);
+    background-color: hsla(var(--success-hue), 100%, 100%, 1);
+}
+
+.btn-outline-success-ignus:hover {
+    color: #fff;
+    background-color: hsla(var(--success-hue), 100%, var(--success-lightness), 1);
+    outline: none;
+}
+
+.btn-outline-danger-ignus {
+    color: hsla(var(--danger-hue), 100%, 40%, 1);
+    border: 1px solid hsla(var(--danger-hue), 100%, 40%, 1);
+    background-color: hsla(var(--danger-hue), 100%, 100%, 1);
+}
+
+.btn-outline-danger-ignus:hover {
+    color: #fff;
+    background-color: hsla(var(--danger-hue), 100%, var(--danger-lightness), 1);
+    outline: none;
+}
+
+
+.btn-outline-warning-ignus {
+    border: 1px solid hsla(var(--warning-hue), 100%, 46%, 1);
+    color: hsla(var(--warning-hue), 100%, 46%, 1);
+    background-color: hsla(var(--warning-hue), 100%, 100%, 1);
+}
+
+.btn-outline-warning-ignus:hover {
+    color: black;
+    background-color: hsla(var(--warning-hue), 100%, var(--warning-lightness), 1);
+    outline: none;
+}
+
+
+.btn-outline-info-ignus {
+    border: 1px solid hsla(var(--info-hue), 100%, var(--info-lightness), 1);
+    color: hsla(var(--info-hue), 100%, var(--info-lightness), 1);
+    background-color: hsla(var(--info-hue), 100%, 100%, 1);
+}
+
+.btn-outline-info-ignus:hover {
+    color: white;
+    background-color: hsla(var(--info-hue), 100%, var(--info-lightness), 1);
+    outline: none;
+}
+
+.btn-outline-dark-ignus {
+    border: 1px solid black;
+    color: black;
+    background-color: hsla(0, 0%, 100%, 1);
+}
+
+.btn-outline-dark-ignus:hover {
+    color: #fff;
+    background-color: hsla(0, 0%, 20%, 1);
+    outline: none;
+}
+
+
+/* Cards */
+
+.card-ignus {
+	min-height: 40px;
+    margin-right: 3%;
+    width: 94%;
+	margin-top: 20px;
+	background-color: white;
+	margin-left: 3%;
+	padding: 29px 27px;
+	border-radius: 10px;
+    box-shadow: var(--large-shadows);
+    font-family: Nunito;
+}
+
+.card-head-ignus {
+	min-height: 30px;
+    width: 100%;
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+
+.card-title-ignus {
+    font-size: 18px;
+	font-family: Lato;
+}
+
+.card-body-ignus {
+    margin-top: 2px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.card-body-inner-ignus {
+    position: relative;
+    overflow-y: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.card-body-inner-ignus::-webkit-scrollbar {
+    width: 6px;
+}
+
+.card-body-inner-ignus::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0px 10px hsla(198, 100%, 100%, 1);
+	box-shadow: inset 0 0 0px 10px hsla(198, 100%, 100%, 1);
+    background-color: hsla(198, 100%, 50%, 0);
+    border-radius: 30px;
+}
+
+.card-body-inner-ignus::-webkit-scrollbar-thumb {
+    background-color: hsla(198, 100%, 0%, 1);
+    border-radius: 50px;
+}
+
+.no-scrollbar-ignus::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+.vertical-line-card-ignus {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    border-left: 2px solid hsla(var(--base-hue), 100%, var(--base-lightness), 1);
+}
+
+.simple-card-ignus {
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.circle-xs-ignus {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+.circle-sm-ignus {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.circle-md-ignus {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.circle-lg-ignus {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+/* Vertical Container */
+
+.vertical-top-gradient-ignus {
+    position: absolute;
+    height: 14px;
+	background-image: linear-gradient(to top, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 1));
+	width: 100%;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.vertical-bottom-gradient-ignus {
+    position: absolute;
+    height: 14px;
+	background-image: linear-gradient(to top, hsla(0, 0%, 100%, 1), hsla(0, 0%, 100%, 0));
+	width: 100%;
+    bottom: 0;
+	pointer-events: none;
+	z-index: 1;
+}
+
+
+.vs-container-outer-ignus {
+    position: relative;
+}
+
+.vs-container-inner-ignus {
+    position: relative;
+    overflow-y: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.vs-container-inner-ignus::-webkit-scrollbar {
+    width: 6px;
+}
+
+.vs-container-inner-ignus::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0px 10px hsla(198, 100%, 100%, 1);
+	box-shadow: inset 0 0 0px 10px hsla(198, 100%, 100%, 1);
+    background-color: hsla(198, 100%, 50%, 0);
+    border-radius: 30px;
+}
+
+.vs-container-inner-ignus::-webkit-scrollbar-thumb {
+    background-color: hsla(198, 100%, 0%, 1);
+    border-radius: 50px;
+}
+
+
+.text-grey-ignus {
+	font-size: 14px;
+	color: hsla(198, 0%, 60%, 1);
+}
+
+.text-ignus {
+	font-size: 14px;
+}
+
+.text-colored-ignus {
+    font-size: 14px;
+    color: hsla(var(--base-hue), 100%, 50%, 1);
+}
+
+.text-centered-ignus {
+    text-align: center;
+    width: 100%;
+}
+
+
+/* Horizontal Scroll */
+
+.hs-container-element-ignus {
+    white-space: normal;
+    display: inline-block;
+}
+
+.hs-container-left-button-ignus {
+	font-size: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	height: 100%;
+	width: 10%;
+	color:hsla(0, 0%, 25%, 0.4);
+	cursor: pointer;
+	z-index: 1;
+    background: linear-gradient(to right, white, hsla(0, 0%, 0%, 0));
+}
+
+.hs-container-right-button-ignus {
+	font-size: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	height: 100%;
+	width: 10%;
+	color:hsla(0, 0%, 25%, 0.4);
+	cursor: pointer;
+	right: 0px;
+	z-index: 1;
+    background: linear-gradient(to left, white, hsla(0, 0%, 0%, 0));
+}
+
+
+.hs-container-inner-ignus {
+	overflow-x: auto;
+	white-space: nowrap;
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+    scrollbar-width: none;
+    scrollbar-height: none;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.hs-container-inner-ignus::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+.hs-container-outer-ignus {
+    position: relative;
+}
+
+.demo-card {
+    width: 220px; 
+    height: 150px; 
+    background: url('https://images.pexels.com/photos/3975635/pexels-photo-3975635.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+    box-shadow: var(--small-shadows);
+    border-radius: 20px;
+    filter: saturate(1);
+}
+
+.demo-card:hover {
+    filter: saturate(0);
+}
+
+
+.demo-card2 {
+    width: 100%; 
+    height: 120px; 
+    background: url('https://images.pexels.com/photos/3975635/pexels-photo-3975635.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+    box-shadow: var(--small-shadows);
+    border-radius: 20px;
+    filter: saturate(1);
+}
+
+.demo-card2:hover {
+    filter: saturate(0);
+}
+
+.demo-profile-pic {
+    background: url('https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+}
+
+.demo-profile-pic-2 {
+    background: url('https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+}
+
+.demo-profile-pic-3 {
+    background: url('https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+}
+
+.demo-profile-pic-4 {
+    background: url('https://images.pexels.com/photos/1167134/pexels-photo-1167134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+}
+
+.demo-profile-pic-5 {
+    background: url('https://images.pexels.com/photos/774095/pexels-photo-774095.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+}
+
+.demo-profile-pic-6 {
+    background: url('https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+}
+
+
