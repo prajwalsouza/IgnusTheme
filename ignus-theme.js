@@ -51,6 +51,11 @@ ignusTheme.setRSS = function (theRSS) {
     $('#ignus-style-root').html(theRSS)
 }
 
+ignusTheme.setUp = function () {
+    ignusTheme.rss = ignusTheme.generateRSS();
+    ignusTheme.setRSS(ignusTheme.rss)
+}
+
 
 ignusTheme.hsMoveLeft = function(carousalElement, scrollPercentAmount) {
     $(carousalElement).finish();
@@ -63,3 +68,103 @@ ignusTheme.hsMoveRight = function(carousalElement, scrollPercentAmount) {
     var leftPos = $(carousalElement).scrollLeft();
     $(carousalElement).animate({scrollLeft: leftPos + window.innerWidth*0.01*scrollPercentAmount}, 300);
 }
+
+ignusTheme.overlayToggle = function(overlayID) {
+    if (!document.getElementById(overlayID).classList.contains('overlay-ignus-visible')) {
+        isDirectional = (document.getElementById(overlayID).classList.contains('directional-overlay-outer-ignus'))
+        if (isDirectional) {
+            theContainer = $('#' + overlayID).find('.bottom-overlay-padding-ignus')[0]
+            if (theContainer) {
+                $(theContainer).css('bottom', '-' + theContainer.clientHeight + 'px')
+                $(theContainer).animate({'bottom': '0px'}, 300)
+            }
+            theContainer = $('#' + overlayID).find('.left-overlay-padding-ignus')[0]
+            if (theContainer) {
+                $(theContainer).css('left', '-' + theContainer.clientWidth + 'px')
+                $(theContainer).animate({'left': '0px'}, 300)
+            }
+            theContainer = $('#' + overlayID).find('.top-overlay-padding-ignus')[0]
+            if (theContainer) {
+                $(theContainer).css('top', '-' + theContainer.clientHeight + 'px')
+                $(theContainer).animate({'top': '0px'}, 300)
+            }
+            theContainer = $('#' + overlayID).find('.right-overlay-padding-ignus')[0]
+            if (theContainer) {
+                $(theContainer).css('right', '-' + theContainer.clientWidth + 'px')
+                $(theContainer).animate({'right': '0px'}, 300)
+            }
+        }
+    }
+    if (document.getElementById(overlayID).classList.contains('overlay-ignus-visible')) {
+        isDirectional = (document.getElementById(overlayID).classList.contains('directional-overlay-outer-ignus'))
+        if (isDirectional) {
+            theContainer = $('#' + overlayID).find('.bottom-overlay-padding-ignus')[0]
+            if (theContainer) {
+                $(theContainer).css('bottom', '0px')
+                $(theContainer).animate({'bottom': '-' + theContainer.clientHeight + 'px'}, 300)
+                $(theContainer).css('bottom', '0px')
+            }
+            theContainer = $('#' + overlayID).find('.left-overlay-padding-ignus')[0]
+            if (theContainer) {
+                $(theContainer).css('left', '0px')
+                $(theContainer).animate({'left': '-' + theContainer.clientWidth + 'px'}, 300)
+                $(theContainer).css('left', '0px')
+            }
+            theContainer = $('#' + overlayID).find('.top-overlay-padding-ignus')[0]
+            if (theContainer) {
+                $(theContainer).css('top', '0px')
+                $(theContainer).animate({'top': '-' + theContainer.clientHeight + 'px'}, 300)
+                $(theContainer).css('top', '0px')
+            }
+            theContainer = $('#' + overlayID).find('.right-overlay-padding-ignus')[0]
+            if (theContainer) {
+                $(theContainer).css('right', '0px')
+                $(theContainer).animate({'right': '-' + theContainer.clientWidth + 'px'}, 300)
+                $(theContainer).css('right', '0px')
+            }
+        }
+    }
+    
+    document.getElementById(overlayID).classList.toggle('overlay-ignus-visible')
+    
+}
+
+ignusTheme.escape = function(event) {
+    if (event.key == 'Escape') {
+        visibleOverlays = document.getElementsByClassName('overlay-ignus-visible')
+        for (k = 0; k < visibleOverlays.length; k++) {
+            visibleOverlays[k].classList.toggle('overlay-ignus-visible')
+        }
+    }
+}
+
+window.addEventListener('keyup', ignusTheme.escape)
+
+ignusTheme.hsControlRequirement = function () {
+    hsElements = document.getElementsByClassName('hs-container-inner-ignus');
+    for (k = 0; k < hsElements.length; k++) {
+        hsElement = hsElements[k];
+        hsLeft = hsElement.parentNode.getElementsByClassName('hs-container-left-button-ignus')[0]
+        hsRight = hsElement.parentNode.getElementsByClassName('hs-container-right-button-ignus')[0]
+        if (hsElement.scrollWidth == hsElement.clientWidth) {  
+            if (hsLeft.classList.contains('d-sm-flex')) {
+                hsLeft.classList.remove('d-sm-flex')
+            }
+            if (hsRight.classList.contains('d-sm-flex')) {
+                hsRight.classList.remove('d-sm-flex')
+            }
+        }
+        else {
+            if (!hsLeft.classList.contains('d-sm-flex')) {
+                hsLeft.classList.add('d-sm-flex')
+            }
+            if (!hsRight.classList.contains('d-sm-flex')) {
+                hsRight.classList.add('d-sm-flex')
+            }
+        }
+    }
+}
+
+$(document).ready(function() {
+    setInterval(ignusTheme.hsControlRequirement, 1000);
+});

@@ -42,7 +42,6 @@ body::-webkit-scrollbar-thumb {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    border: 0px solid transparent;
     padding: 7px 18px;
     font-size: 15px;
     border-radius: 10px;
@@ -57,6 +56,10 @@ body::-webkit-scrollbar-thumb {
     font-weight: bold;
 }
 
+.btn-ignus:hover {
+    border: 0px solid transparent;
+    outline: none;
+}
 
 .btn-white-ignus {
     color: black;
@@ -414,11 +417,6 @@ body::-webkit-scrollbar-thumb {
     border-radius: 50px;
 }
 
-.no-scrollbar-ignus::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-}
-
 .vertical-line-card-ignus {
     width: 100%;
     padding: 10px 20px;
@@ -453,6 +451,31 @@ body::-webkit-scrollbar-thumb {
     border-radius: 50%;
     width: 100px;
     height: 100px;
+}
+
+
+/* Scrollbars (do not work in firefox) */
+
+.scrollbar-ignus::-webkit-scrollbar {
+    width: 6px;
+    height: 8px;
+}
+
+.scrollbar-ignus::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0px 10px hsla(198, 100%, 100%, 1);
+	box-shadow: inset 0 0 0px 10px hsla(198, 100%, 100%, 1);
+    background-color: hsla(198, 100%, 50%, 0);
+    border-radius: 30px;
+}
+
+.scrollbar-ignus::-webkit-scrollbar-thumb {
+    background-color: hsla(198, 100%, 0%, 1);
+    border-radius: 50px;
+}
+
+.no-scrollbar-ignus::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
 }
 
 /* Vertical Container */
@@ -509,6 +532,11 @@ body::-webkit-scrollbar-thumb {
 .text-grey-ignus {
 	font-size: 14px;
 	color: hsla(198, 0%, 60%, 1);
+}
+
+.text-dark-grey-ignus {
+	font-size: 14px;
+	color: hsla(198, 0%, 40%, 1);
 }
 
 .text-ignus {
@@ -583,6 +611,316 @@ body::-webkit-scrollbar-thumb {
 .hs-container-outer-ignus {
     position: relative;
 }
+
+
+/* Tables */
+
+.table-ignus {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: hsla(0, 0%, 20%, 1);
+    background-color: transparent;
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-family: Nunito;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.table-ignus thead th, .table-ignus thead td {
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom-width: 1px;
+    padding: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.table-ignus thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid hsla(0, 0%, 92%, 1);
+    font-weight: bold;
+}
+
+.table-ignus th, .table-ignus td {
+    vertical-align: top;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid hsla(0, 0%, 92%, 1);
+    font-size: 14px;
+}
+
+
+.table-striped-ignus {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: hsla(0, 0%, 20%, 1);
+    background-color: transparent;
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-family: Nunito;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.table-striped-ignus tbody tr:nth-of-type(odd) {
+    background-color: hsla(0, 0%, 96%, 1);
+}
+
+.table-striped-ignus thead th {
+    vertical-align: bottom;
+    border-bottom: 0px solid hsla(0, 0%, 92%, 1);
+    font-weight: bold;
+}
+
+.table-striped-ignus th, .table-striped-ignus td {
+    vertical-align: top;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 0px solid hsla(0, 0%, 92%, 1);
+    font-size: 14px;
+}
+
+
+.table-borderless-ignus {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: hsla(0, 0%, 20%, 1);
+    background-color: transparent;
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-family: Nunito;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.table-borderless-ignus thead th {
+    vertical-align: bottom;
+    border-bottom: 0px solid hsla(0, 0%, 92%, 1);
+    font-weight: bold;
+}
+
+.table-borderless-ignus th, .table-borderless-ignus td {
+    vertical-align: top;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 0px solid hsla(0, 0%, 92%, 1);
+    font-size: 14px;
+}
+
+.table-hover-ignus tbody tr:hover {
+    background: hsla(0, 0%, 98%, 1);
+}
+
+
+/* form items */
+/* select  */
+
+select {
+    border: 1px solid hsla(0, 0%, 80%, 1);
+    border-radius: 7px;
+    outline: none;
+    margin-right: 40px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    padding-left: 6px;
+    padding-top: 3px;
+    padding-right: 30px;
+    padding-bottom: 3px;
+}
+
+/* input */
+
+input {
+    border: 1px solid hsla(0, 0%, 80%, 1);
+    border-radius: 7px;
+    outline: none;
+    margin-right: 40px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    padding-left: 10px;
+    padding-top: 4px;
+    padding-right: 30px;
+    padding-bottom: 4px;
+}
+
+
+/* overlays */
+.overlay-ignus-visible {
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+.fullscreen-overlay-outer-ignus {
+    z-index: 100;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: hsla(0, 0%, 0%, 0.1);
+    visibility: hidden;
+    pointer-events: none;
+    transition: visibility 0.3s;
+}
+
+.fullscreen-overlay-ignus {
+    border-radius: 15px;
+    pointer-events: auto;
+    background: white;
+    margin-left: 5%;
+    width: 90%;
+    overflow: auto;
+    padding: 20px 30px;
+    min-height: 100px;
+    height: 90vh;
+    max-height: 90vh;
+    position: relative;
+    margin-top: 5vh;
+}
+
+
+.fullscreen-overlay-inner-ignus {
+    background: transparent;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+}
+
+
+
+
+.directional-overlay-outer-ignus {
+    z-index: 100;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: hsla(0, 0%, 0%, 0.1);
+    visibility: hidden;
+    pointer-events: none;
+    transition: visibility 0.3s;
+}
+
+.directional-overlay-inner-ignus {
+    background: transparent;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+}
+
+
+.bottom-overlay-positioning-ignus {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.bottom-overlay-padding-ignus {
+    border-radius: 15px 15px 0px 0px;
+    pointer-events: auto;
+    background: white;
+    width: 100%;
+    padding: 20px 30px;
+    /* min-height: 100px; */
+    max-height: 90vh;
+    position: relative;
+}
+
+.bottom-overlay-ignus {
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    max-height: calc(90vh - 40px);
+    max-width: calc(100vw - 60px);
+}
+
+
+.left-overlay-positioning-ignus {
+    position: absolute;
+    height: 100%;
+}
+
+.left-overlay-padding-ignus {
+    border-radius: 0px 15px 15px 0px;
+    pointer-events: auto;
+    background: white;
+    height: 100%;
+    overflow: auto;
+    padding: 20px 30px;
+    /* min-width: 100px; */
+    max-width: 90vw;
+    position: relative;
+}
+
+.left-overlay-ignus {
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    max-height: calc(100vh - 40px);
+    max-width: calc(90vw - 60px);
+}
+
+.right-overlay-positioning-ignus {
+    position: absolute;
+    right: 0px;
+    height: 100%;
+}
+
+.right-overlay-padding-ignus {
+    border-radius: 15px 0px 0px 15px;
+    pointer-events: auto;
+    background: white;
+    height: 100%;
+    overflow: auto;
+    padding: 20px 30px;
+    /* min-width: 100px; */
+    max-width: 90vw;
+    position: relative;
+}
+
+.right-overlay-ignus {
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    max-height: calc(100vh - 40px);
+    max-width: calc(90vw - 60px);
+}
+
+.top-overlay-positioning-ignus {
+    position: absolute;
+    width: 100%;
+}
+
+.top-overlay-padding-ignus {
+    border-radius: 0px 0px 15px 15px;
+    pointer-events: auto;
+    background: white;
+    width: 100%;
+    overflow: auto;
+    padding: 20px 30px;
+    /* min-height: 100px; */
+    max-height: 90vw;
+    position: relative;
+}
+
+.top-overlay-ignus {
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    max-height: calc(90vh - 40px);
+    max-width: calc(100vw - 60px);
+}
+
+/* demo elements */
 
 .demo-card {
     width: 220px; 
