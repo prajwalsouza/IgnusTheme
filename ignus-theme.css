@@ -716,38 +716,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-/* form items */
-/* select  */
-
-select {
-    border: 1px solid hsla(0, 0%, 80%, 1);
-    border-radius: 7px;
-    outline: none;
-    margin-right: 40px;
-    margin-bottom: 4px;
-    font-size: 13px;
-    padding-left: 6px;
-    padding-top: 3px;
-    padding-right: 30px;
-    padding-bottom: 3px;
-}
-
-/* input */
-
-input {
-    border: 1px solid hsla(0, 0%, 80%, 1);
-    border-radius: 7px;
-    outline: none;
-    margin-right: 40px;
-    margin-bottom: 4px;
-    font-size: 13px;
-    padding-left: 10px;
-    padding-top: 4px;
-    padding-right: 30px;
-    padding-bottom: 4px;
-}
-
-
 /* overlays */
 .overlay-ignus-visible {
     visibility: visible !important;
@@ -919,6 +887,179 @@ input {
     max-height: calc(90vh - 40px);
     max-width: calc(100vw - 60px);
 }
+
+
+/* forms */
+
+.form-label-ignus {
+    font-family: Nunito;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: hsla(0, 0%, 60%, 1)
+}
+
+.input-underlined-ignus {
+    font-family: Nunito;
+    font-weight: bold;
+    border: 0px solid hsla(0, 0%, 80%, 1);
+    border-bottom: 1px solid hsla(var(--base-hue), 100%, 50%, 1);
+    border-radius: 0px;
+    outline: none;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding-left: 10px;
+    padding-top: 4px;
+    padding-right: 30px;
+    padding-bottom: 4px;
+}
+
+.input-underlined-ignus::-webkit-input-placeholder {
+    color: hsla(0, 0%, 70%, 1);
+}
+.input-underlined-ignus::placeholder {
+    color: hsla(0, 0%, 70%, 1);
+}
+
+.input-box-ignus {
+    font-family: Nunito;
+    font-weight: bold;
+    border: 1px solid hsla(0, 0%, 90%, 1);
+    border-radius: 10px;
+    outline: none;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    background-color: hsla(0, 0%, 99%, 0);
+}
+
+.input-box-ignus::-webkit-input-placeholder {
+    color: hsla(0, 0%, 70%, 1);
+}
+.input-box-ignus::placeholder {
+    color: hsla(0, 0%, 70%, 1);
+}
+
+input[type="datetime-local"] {
+    font-size: 13.5px;
+}
+
+
+.select-box-ignus {
+    font-family: Nunito;
+    font-weight: bold;
+    border: 1px solid hsla(0, 0%, 90%, 1);
+    border-radius: 10px;
+    outline: none;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    background-color: hsla(0, 0%, 97%, 0);
+    font-size: 14px;
+}
+
+.select-underlined-ignus {
+    font-family: Nunito;
+    font-weight: bold;
+    border: 0px solid hsla(0, 0%, 80%, 1);
+    border-bottom: 1px solid hsla(var(--base-hue), 100%, 50%, 1);
+    border-radius: 0px;
+    outline: none;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    background-color: hsla(0, 0%, 97%, 0);
+    font-size: 14px;
+}
+
+.input-textarea-ignus {
+    font-family: Nunito;
+    font-weight: bold;
+    border: 1px solid hsla(0, 0%, 90%, 1);
+    border-radius: 10px;
+    outline: none;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    background-color: hsla(0, 0%, 99%, 0);
+}
+
+.input-box-color-ignus {
+    min-width: 200px;
+    font-family: Nunito;
+    font-weight: bold;
+    border: 1px solid hsla(0, 0%, 90%, 1);
+    border-radius: 10px;
+    outline: none;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding-left: 20px;
+    padding-top: 6px;
+    padding-right: 30px;
+    padding-bottom: 6px;
+    height: 30px;
+    min-height: 30px;
+    background-color: hsla(0, 0%, 99%, 0);
+}
+
+.slider-ignus {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    border-radius: 4px;
+    background: hsla(0, 0%, 90%, 1);
+    outline: none;
+}
+  
+.slider-ignus:hover {
+    opacity: 1;
+}
+
+.slider-ignus::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: hsla(var(--base-hue), 100%, 50%, 1);
+    cursor: pointer;
+}
+  
+.slider::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: hsla(var(--base-hue), 100%, 50%, 1);
+    cursor: pointer;
+}
+
+
+/* Texts */
+
+.info-text-ignus {
+    font-family: Nunito;
+    color: hsla(0, 0%, 50%, 1);
+    font-size: 13px;
+}
+
+.error-text-ignus {
+    font-family: Nunito;
+    color: hsla(var(--danger-hue), 100%, var(--danger-lightness), 1);
+    font-size: 13px;
+}
+
 
 /* demo elements */
 
