@@ -29,6 +29,11 @@ body::-webkit-scrollbar-thumb {
     border-radius: 50px;
 }
 
+/* Body Background */
+.faint-primary-background-ignus {
+    background-color: hsla(var(--base-hue), 20%, 98%, 1);
+}
+
 /* Buttons */
 
 .btn-ignus {
@@ -147,7 +152,7 @@ body::-webkit-scrollbar-thumb {
 /* Lighter Buttons */
 
 .btn-light-primary-ignus {
-    color: hsla(var(--base-hue), 100%, 50%, 1);
+    color: var(--textcolor-for-reading);
     background-color: hsla(var(--base-hue), 100%, 97%, 1);
 }
 
@@ -220,7 +225,7 @@ body::-webkit-scrollbar-thumb {
 /* Hover Buttons */
 
 .btn-hover-primary-ignus {
-    color: hsla(var(--base-hue), 100%, 50%, 1);
+    color: var(--textcolor-for-reading);
     background-color: hsla(0, 100%, 100%, 1);
 }
 
@@ -286,7 +291,7 @@ body::-webkit-scrollbar-thumb {
 
 .btn-outline-primary-ignus {
     border: 1px solid hsla(var(--base-hue), 100%, 50%, 1);
-    color: hsla(var(--base-hue), 100%, 50%, 1);
+    color: var(--textcolor-for-reading);
     background-color: hsla(var(--base-hue), 100%, 100%, 1);
 }
 
@@ -294,6 +299,7 @@ body::-webkit-scrollbar-thumb {
     color: var(--textcolor-for-colored-background);
     background-color: hsla(var(--base-hue), 100%, var(--base-lightness), 1);
     outline: none;
+    border: 1px solid transparent;
 }
 
 
@@ -307,6 +313,7 @@ body::-webkit-scrollbar-thumb {
     color: #fff;
     background-color: hsla(var(--success-hue), 100%, var(--success-lightness), 1);
     outline: none;
+    border: 1px solid transparent;
 }
 
 .btn-outline-danger-ignus {
@@ -319,6 +326,7 @@ body::-webkit-scrollbar-thumb {
     color: #fff;
     background-color: hsla(var(--danger-hue), 100%, var(--danger-lightness), 1);
     outline: none;
+    border: 1px solid transparent;
 }
 
 
@@ -332,6 +340,7 @@ body::-webkit-scrollbar-thumb {
     color: black;
     background-color: hsla(var(--warning-hue), 100%, var(--warning-lightness), 1);
     outline: none;
+    border: 1px solid transparent;
 }
 
 
@@ -345,6 +354,7 @@ body::-webkit-scrollbar-thumb {
     color: white;
     background-color: hsla(var(--info-hue), 100%, var(--info-lightness), 1);
     outline: none;
+    border: 1px solid transparent;
 }
 
 .btn-outline-dark-ignus {
@@ -357,19 +367,113 @@ body::-webkit-scrollbar-thumb {
     color: #fff;
     background-color: hsla(0, 0%, 20%, 1);
     outline: none;
+    border: 1px solid transparent;
 }
 
+
+/* Vertical Line Buttons */
+
+.btn-vertical-line-primary-ignus {
+    border-radius: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-right: 2px solid hsla(var(--base-hue), 100%, 50%, 1);
+    color: var(--textcolor-for-reading);
+    background-color: hsla(var(--base-hue), 100%, 100%, 1);
+}
+
+.btn-vertical-line-primary-ignus:hover {
+    color: black;
+    outline: none;
+    border-right: 2px solid black;
+}
+
+
+.btn-vertical-line-success-ignus {
+    color: hsla(var(--success-hue), 100%, 40%, 1);
+    border-radius: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-right: 2px solid hsla(var(--success-hue), 100%, 40%, 1);
+    background-color: hsla(var(--success-hue), 100%, 100%, 1);
+}
+
+.btn-vertical-line-success-ignus:hover {
+    color: black;
+    outline: none;
+    border-right: 2px solid black;
+}
+
+.btn-vertical-line-danger-ignus {
+    color: hsla(var(--danger-hue), 100%, 40%, 1);
+    border-radius: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-right: 2px solid hsla(var(--danger-hue), 100%, 40%, 1);
+    background-color: hsla(var(--danger-hue), 100%, 100%, 1);
+}
+
+.btn-vertical-line-danger-ignus:hover {
+    color: black;
+    outline: none;
+    border-right: 2px solid black;
+}
+
+
+.btn-vertical-line-warning-ignus {
+    border-radius: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-right: 2px solid hsla(var(--warning-hue), 100%, 46%, 1);
+    color: hsla(var(--warning-hue), 100%, 46%, 1);
+    background-color: hsla(var(--warning-hue), 100%, 100%, 1);
+}
+
+.btn-vertical-line-warning-ignus:hover {
+    color: black;
+    outline: none;
+    border-right: 2px solid black;
+}
+
+
+.btn-vertical-line-info-ignus {
+    border-radius: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-right: 2px solid hsla(var(--info-hue), 100%, var(--info-lightness), 1);
+    color: hsla(var(--info-hue), 100%, var(--info-lightness), 1);
+    background-color: hsla(var(--info-hue), 100%, 100%, 1);
+}
+
+.btn-vertical-line-info-ignus:hover {
+    color: black;
+    outline: none;
+    border-right: 2px solid black;
+}
+
+.btn-vertical-line-dark-ignus {
+    border-radius: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-right: 2px solid black;
+    color: black;
+    background-color: hsla(0, 0%, 100%, 1);
+}
+
+.btn-vertical-line-dark-ignus:hover {
+    color: black;
+    outline: none;
+    border-right: 2px solid black;
+}
 
 /* Cards */
 
 .card-ignus {
 	min-height: 40px;
-    margin-right: 3%;
-    width: 94%;
+    width: 100%;
 	margin-top: 20px;
 	background-color: white;
-	margin-left: 3%;
-	padding: 29px 27px;
+	padding: 27px 27px;
 	border-radius: 10px;
     box-shadow: var(--large-shadows);
     font-family: Nunito;
@@ -384,7 +488,7 @@ body::-webkit-scrollbar-thumb {
 
 .card-title-ignus {
     font-size: 18px;
-	font-family: Lato;
+	font-family: Nunito;
 }
 
 .card-body-ignus {
@@ -398,6 +502,7 @@ body::-webkit-scrollbar-thumb {
     overflow-y: auto;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-family: Nunito;
 }
 
 
@@ -420,8 +525,24 @@ body::-webkit-scrollbar-thumb {
 .vertical-line-card-ignus {
     width: 100%;
     padding: 10px 20px;
-    margin: 10px 20px;
     border-left: 2px solid hsla(var(--base-hue), 100%, var(--base-lightness), 1);
+    font-family: Nunito;
+    min-height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bottom-anchored-card-ignus {
+	min-height: 40px;
+    width: 100%;
+	margin-top: 20px;
+	background-color: white;
+	padding: 27px 27px;
+	border-radius: 10px;
+    box-shadow: var(--large-shadows);
+    font-family: Nunito;
+    display: flex;
+    align-items: flex-end;
 }
 
 .simple-card-ignus {
@@ -528,24 +649,25 @@ body::-webkit-scrollbar-thumb {
     border-radius: 50px;
 }
 
+.title-text-ignus {
+	font-size: 18px;
+}
 
 .text-grey-ignus {
-	font-size: 14px;
 	color: hsla(198, 0%, 60%, 1);
 }
 
 .text-dark-grey-ignus {
-	font-size: 14px;
 	color: hsla(198, 0%, 40%, 1);
 }
 
 .text-ignus {
 	font-size: 14px;
+    font-family: Nunito;
 }
 
 .text-colored-ignus {
-    font-size: 14px;
-    color: hsla(var(--base-hue), 100%, 50%, 1);
+    color: var(--textcolor-for-reading);
 }
 
 .text-centered-ignus {
@@ -568,7 +690,7 @@ body::-webkit-scrollbar-thumb {
 	align-items: center;
 	position: absolute;
 	height: 100%;
-	width: 10%;
+	width: 50px;
 	color:hsla(0, 0%, 25%, 0.4);
 	cursor: pointer;
 	z-index: 1;
@@ -582,7 +704,7 @@ body::-webkit-scrollbar-thumb {
 	align-items: center;
 	position: absolute;
 	height: 100%;
-	width: 10%;
+	width: 50px;
 	color:hsla(0, 0%, 25%, 0.4);
 	cursor: pointer;
 	right: 0px;
@@ -1135,3 +1257,12 @@ input[type="datetime-local"] {
 }
 
 
+/* icons */
+.primary-gradient-text-ignus {
+    background-image: linear-gradient(to left top, hsla(var(--base-hue), 100%, 50%, 1), hsla(var(--secondary-hue), 100%, 50%, 1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
