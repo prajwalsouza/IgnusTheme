@@ -47,8 +47,8 @@ body::-webkit-scrollbar-thumb {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    padding: 7px 18px;
-    font-size: 15px;
+    padding: 5px 15px;
+    font-size: 13px;
     border-radius: 10px;
     cursor: pointer;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -59,6 +59,11 @@ body::-webkit-scrollbar-thumb {
     border: 0px solid transparent;
     outline: none;
     font-weight: bold;
+}
+
+.btn-ignus:focus {
+    border: 0px solid transparent;
+    outline: none;
 }
 
 .btn-ignus:hover {
@@ -226,7 +231,7 @@ body::-webkit-scrollbar-thumb {
 
 .btn-hover-primary-ignus {
     color: var(--textcolor-for-reading);
-    background-color: hsla(0, 100%, 100%, 1);
+    background-color: transparent;
 }
 
 .btn-hover-primary-ignus:hover {
@@ -237,7 +242,7 @@ body::-webkit-scrollbar-thumb {
 
 .btn-hover-success-ignus {
     color: hsla(var(--success-hue), 100%, 40%, 1);
-    background-color: hsla(var(--success-hue), 100%, 100%, 1);
+    background-color: transparent;
 }
 
 .btn-hover-success-ignus:hover {
@@ -247,7 +252,7 @@ body::-webkit-scrollbar-thumb {
 
 .btn-hover-danger-ignus {
     color: hsla(var(--danger-hue), 100%, 40%, 1);
-    background-color: hsla(var(--danger-hue), 100%, 100%, 1);
+    background-color: transparent;
 }
 
 .btn-hover-danger-ignus:hover {
@@ -258,7 +263,7 @@ body::-webkit-scrollbar-thumb {
 
 .btn-hover-warning-ignus {
     color: hsla(var(--warning-hue), 100%, 46%, 1);
-    background-color: hsla(var(--warning-hue), 100%, 100%, 1);
+    background-color: transparent;
 }
 
 .btn-hover-warning-ignus:hover {
@@ -269,7 +274,7 @@ body::-webkit-scrollbar-thumb {
 
 .btn-hover-info-ignus {
     color: hsla(var(--info-hue), 100%, var(--info-lightness), 1);
-    background-color: hsla(var(--info-hue), 100%, 100%, 1);
+    background-color: transparent;
 }
 
 .btn-hover-info-ignus:hover {
@@ -279,7 +284,7 @@ body::-webkit-scrollbar-thumb {
 
 .btn-hover-dark-ignus {
     color: black;
-    background-color: hsla(0, 0%, 100%, 1);
+    background-color: transparent;
 }
 
 .btn-hover-dark-ignus:hover {
@@ -665,6 +670,18 @@ body::-webkit-scrollbar-thumb {
 	font-size: 14px;
     font-family: Nunito;
 }
+
+.text-small-ignus {
+	font-size: 12px;
+    font-family: Nunito;
+}
+
+.text-large-ignus {
+	font-size: 18px;
+    font-family: Nunito;
+}
+
+
 
 .text-colored-ignus {
     color: var(--textcolor-for-reading);
@@ -1182,6 +1199,35 @@ input[type="datetime-local"] {
     font-size: 13px;
 }
 
+
+/* profile */
+
+.profile-photo-small-ignus {
+    background-size: cover;
+    width: 47px;
+    height: 43px;
+    background-color: black;
+    border-radius: 8px;
+}
+
+/* icons - font awesome */
+
+.icon-small-ignus {
+    font-size: 16px !important;
+}
+
+
+/* disabled state  */
+
+.disabled-state-ignus {
+    filter: grayscale(1) opacity(0.6);
+    pointer-events: none;
+}
+
+.enabled-state-ignus {
+    filter: none;
+    pointer-events: auto;
+}
 
 /* demo elements */
 
