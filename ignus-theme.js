@@ -1,6 +1,6 @@
 ignusTheme = {}
 
-ignusTheme.baseHue = 198;
+ignusTheme.baseHue = 260;
 ignusTheme.baseLightness = 50;
 
 ignusTheme.designType = 'simple shadow' // flat, neumorphic, simple shadow, custom
@@ -9,9 +9,11 @@ ignusTheme.generateRSS = function () {
     ignusTextWhiteDuringColored = (ignusTheme.baseHue >=0 && ignusTheme.baseHue <=34) || (ignusTheme.baseHue >=195 && ignusTheme.baseHue <=360)
     if (ignusTextWhiteDuringColored) {
         ignusTextColorDuringColoredBackground = 'white';
+        ignusReadingTextColor = 'hsla(var(--base-hue), 100%, 50%, 1)';
     }
     else {
         ignusTextColorDuringColoredBackground = 'black';
+        ignusReadingTextColor = 'hsla(var(--base-hue), 100%, 35%, 1)';
     }
 
     ignusTextColorDuringColoredBackgroundOnHover = 'white';
@@ -31,6 +33,7 @@ ignusTheme.generateRSS = function () {
 
     ignusRSS = "<style id='ignus-style-root'>:root {"
 
+    ignusRSS = ignusRSS + "--textcolor-for-reading: " + ignusReadingTextColor + ";"
     ignusRSS = ignusRSS + "--textcolor-for-colored-background: " + ignusTextColorDuringColoredBackground + ";"
     ignusRSS = ignusRSS + "--textcolor-for-colored-background-on-hover: " + ignusTextColorDuringColoredBackgroundOnHover + ";"
     ignusRSS = ignusRSS + "--base-hue: " + ignusTheme.baseHue + ";"
@@ -38,7 +41,7 @@ ignusTheme.generateRSS = function () {
     ignusRSS = ignusRSS + "--base-hue-in-deg: " + ignusTheme.baseHue + "deg;"
     ignusRSS = ignusRSS + "--large-shadows: " + ignusTheme.largeShadows + ";"
     ignusRSS = ignusRSS + "--small-shadows: " + ignusTheme.smallShadows + ";"
-    
+    ignusRSS = ignusRSS + "--secondary-hue: " + (ignusTheme.baseHue + 80) + ";"
     ignusRSS = ignusRSS + "}</style>"
 
     return ignusRSS
@@ -147,6 +150,8 @@ ignusTheme.hsControlRequirement = function () {
         hsLeft = hsElement.parentNode.getElementsByClassName('hs-container-left-button-ignus')[0]
         hsRight = hsElement.parentNode.getElementsByClassName('hs-container-right-button-ignus')[0]
         if (hsElement.scrollWidth == hsElement.clientWidth) {  
+            hsElement.style.paddingLeft = '0px';
+            hsElement.style.paddingRight = '0px';
             if (hsLeft.classList.contains('d-sm-flex')) {
                 hsLeft.classList.remove('d-sm-flex')
             }
@@ -155,6 +160,15 @@ ignusTheme.hsControlRequirement = function () {
             }
         }
         else {
+            if (window.innerWidth >= 576) {
+                hsElement.style.paddingLeft = '50px';
+                hsElement.style.paddingRight = '50px';
+            }
+            else {
+                hsElement.style.paddingLeft = '0px';
+                hsElement.style.paddingRight = '0px';
+            }
+           
             if (!hsLeft.classList.contains('d-sm-flex')) {
                 hsLeft.classList.add('d-sm-flex')
             }
@@ -166,5 +180,5 @@ ignusTheme.hsControlRequirement = function () {
 }
 
 $(document).ready(function() {
-    setInterval(ignusTheme.hsControlRequirement, 1000);
+    setInterval(ignusTheme.hsControlRequirement, 300);
 });
